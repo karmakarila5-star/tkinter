@@ -1,0 +1,13 @@
+from tkinter import *
+window = Tk()
+window.title("Event Handler")
+window.geometry("100x100")
+def handle_keypress(event):
+    """Print the character associated to the key pressed"""
+window.bind("<Key>", handle_keypress)
+def handle_click(event):
+    print("\nThe button was clicked me!")
+button = Button(text="Click me!")
+button.pack()
+button.bind("<Button-1>", handle_click)
+window.mainloop()
